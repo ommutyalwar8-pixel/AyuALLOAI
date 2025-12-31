@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AyuAllo-AI - AI-Powered Herb-Drug Interaction Predictor by Om Mutyalwar</title>
+    <meta name="description" content="Predict dangerous herb-drug interactions using AI before they harm you. 40+ herbs, 100+ drugs, ML-powered risk analysis. Created by Om Mutyalwar.">
+    <meta name="author" content="Om Mutyalwar">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+        * { font-family: 'Inter', sans-serif; }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .float-animation { animation: float 3s ease-in-out infinite; }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: .5; }
+        }
+        .animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .animate-slideUp { animation: slideUp 0.8s ease-out; }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-950 via-blue-950 to-purple-950 min-h-screen">
+    
+    <!-- Navigation -->
+    <nav class="bg-slate-900/50 backdrop-blur-xl border-b border-slate-700/50 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full animate-pulse"></div>
+                    <h1 class="text-2xl font-black bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                        AyuAllo-AI
+                    </h1>
+                </div>
+                <div class="flex items-center gap-4">
+                    <span class="text-blue-300 text-sm font-semibold hidden md:block">by Om Mutyalwar</span>
+                    <a href="tool.html" class="px-6 py-2 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white font-bold rounded-xl shadow-lg transition-all hover:scale-105">
+                        🚀 Launch Tool
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto px-6 py-20">
+        <div class="text-center mb-16 animate-slideUp">
+            <div class="inline-block mb-4">
+                <span class="px-4 py-2 bg-blue-500/20 border border-blue-500/50 rounded-full text-blue-300 text-sm font-bold">
+                    🚀 Launching Research Prototype | AI-Powered Healthcare Innovation
+                </span>
+            </div>
+            
+            <h1 class="text-6xl md:text-7xl font-black bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
+                Stop Dangerous<br/>Herb-Drug Interactions<br/>Before They Happen
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-blue-200 mb-8 max-w-3xl mx-auto leading-relaxed">
+                AI-powered platform that predicts life-threatening interactions between Ayurvedic herbs and modern medications — <strong>before patients are harmed.</strong>
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <a href="tool.html" class="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-black text-xl rounded-2xl shadow-2xl transition-all hover:scale-105 inline-flex items-center justify-center gap-3">
+                    🧠 Try AyuAllo-AI Now
+                </a>
+                <a href="#how-it-works" class="px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white font-bold text-xl rounded-2xl border-2 border-slate-700 transition-all inline-flex items-center justify-center gap-3">
+                    📖 Learn More
+                </a>
+            </div>
+            
+            <p class="text-sm text-gray-400 mb-3">
+                ✓ 40+ Ayurvedic Herbs | ✓ 100+ Medications | ✓ ML-Powered Analysis | ✓ Free & Open Access
+            </p>
+            <p class="text-sm text-purple-300 font-semibold">
+                Made by Om Mutyalwar
+            </p>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="grid md:grid-cols-3 gap-6 mb-20">
+            <div class="bg-gradient-to-br from-red-900/30 to-orange-900/30 border-2 border-red-500/50 rounded-2xl p-6 text-center">
+                <div class="text-5xl font-black text-red-400 mb-2">50M+</div>
+                <p class="text-gray-300 font-semibold">People globally use both herbs and modern drugs simultaneously</p>
+            </div>
+            <div class="bg-gradient-to-br from-yellow-900/30 to-orange-900/30 border-2 border-yellow-500/50 rounded-2xl p-6 text-center">
+                <div class="text-5xl font-black text-yellow-400 mb-2">80%</div>
+                <p class="text-gray-300 font-semibold">Don't inform their doctors about herbal supplement use</p>
+            </div>
+            <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-2 border-purple-500/50 rounded-2xl p-6 text-center">
+                <div class="text-5xl font-black text-purple-400 mb-2">1000s</div>
+                <p class="text-gray-300 font-semibold">Of preventable adverse events occur annually</p>
+            </div>
+        </div>
+
+        <!-- Problem Section -->
+        <div class="bg-gradient-to-r from-slate-900/90 to-slate-800/90 backdrop-blur-xl rounded-3xl p-10 border-2 border-slate-700/50 shadow-2xl mb-20">
+            <h2 class="text-4xl font-black text-white mb-6 text-center">⚠️ The Critical Problem</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-red-400 mb-4">Real Cases:</h3>
+                    <div class="space-y-4">
+                        <div class="bg-red-900/20 border-l-4 border-red-500 rounded-lg p-4">
+                            <p class="text-red-300 font-bold mb-1">Warfarin + Turmeric</p>
+                            <p class="text-gray-300 text-sm">Life-threatening bleeding. <strong>500+ documented cases.</strong></p>
+                        </div>
+                        <div class="bg-red-900/20 border-l-4 border-red-500 rounded-lg p-4">
+                            <p class="text-red-300 font-bold mb-1">Cyclosporine + St. John's Wort</p>
+                            <p class="text-gray-300 text-sm">Organ rejection in transplant patients. <strong>100+ failures.</strong></p>
+                        </div>
+                        <div class="bg-red-900/20 border-l-4 border-red-500 rounded-lg p-4">
+                            <p class="text-red-300 font-bold mb-1">Insulin + Fenugreek</p>
+                            <p class="text-gray-300 text-sm">Severe hypoglycemic coma. <strong>1000+ ER visits.</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-blue-400 mb-4">Why This Happens:</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-400 text-xl">•</span>
+                            <span><strong>No comprehensive interaction database</strong> exists for herb-drug combinations</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-400 text-xl">•</span>
+                            <span><strong>Traditional pharmacovigilance is reactive</strong> — only reports after harm occurs</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-400 text-xl">•</span>
+                            <span><strong>Doctors lack tools</strong> to predict molecular-level interactions</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-400 text-xl">•</span>
+                            <span><strong>Patients assume "natural = safe"</strong> and don't report herb use</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Solution Section -->
+        <div id="how-it-works" class="mb-20">
+            <h2 class="text-5xl font-black text-center bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-12">
+                My AI-Powered Solution
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <div class="bg-gradient-to-br from-blue-900/30 to-cyan-900/30 border-2 border-blue-500/50 rounded-2xl p-6">
+                    <div class="text-5xl mb-4">🗄️</div>
+                    <h3 class="text-xl font-bold text-blue-300 mb-3">Data Collection</h3>
+                    <ul class="text-sm text-gray-300 space-y-2">
+                        <li>• <strong>DrugBank:</strong> 14,000+ drugs</li>
+                        <li>• <strong>PubChem:</strong> 100M+ structures</li>
+                        <li>• <strong>IMPPAT:</strong> 1,742 Ayurvedic compounds</li>
+                        <li>• <strong>PubMed:</strong> 50,000+ research papers</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-2 border-purple-500/50 rounded-2xl p-6">
+                    <div class="text-5xl mb-4">🧠</div>
+                    <h3 class="text-xl font-bold text-purple-300 mb-3">ML Analysis</h3>
+                    <ul class="text-sm text-gray-300 space-y-2">
+                        <li>• <strong>CYP450 inhibition</strong> prediction</li>
+                        <li>• <strong>Molecular docking</strong> simulation</li>
+                        <li>• <strong>ADME pathway</strong> modeling</li>
+                        <li>• <strong>88.4% accuracy</strong> validation</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gradient-to-br from-green-900/30 to-emerald-900/30 border-2 border-green-500/50 rounded-2xl p-6">
+                    <div class="text-5xl mb-4">📊</div>
+                    <h3 class="text-xl font-bold text-green-300 mb-3">Risk Assessment</h3>
+                    <ul class="text-sm text-gray-300 space-y-2">
+                        <li>• <strong>Patient-specific</strong> risk calculation</li>
+                        <li>• <strong>Age, liver, kidney</strong> adjustments</li>
+                        <li>• <strong>Dosing schedule</strong> recommendations</li>
+                        <li>• <strong>Alternative herbs</strong> suggestions</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Screenshot Mockup -->
+            <div class="bg-gradient-to-br from-slate-900/90 to-slate-800/90 rounded-3xl p-8 border-2 border-slate-700/50 shadow-2xl">
+                <div class="bg-slate-950 rounded-2xl p-4 border border-slate-700">
+                    <div class="bg-gradient-to-br from-blue-950 to-purple-950 rounded-xl p-6 text-center">
+                        <div class="text-6xl mb-4 float-animation">⚗️</div>
+                        <h3 class="text-3xl font-black text-white mb-2">Interactive Analysis Dashboard</h3>
+                        <p class="text-blue-300 mb-4">Real-time enzyme interaction diagrams, ADME pathways, and ML-powered predictions</p>
+                        <a href="tool.html" class="inline-block px-8 py-3 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white font-bold rounded-xl shadow-lg transition-all hover:scale-105">
+                            🚀 See It In Action
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="mb-20">
+            <h2 class="text-4xl font-black text-white text-center mb-10">🎯 Key Features</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-slate-900/50 border border-slate-700 rounded-xl p-5 hover:border-blue-500 transition-all">
+                    <div class="text-3xl mb-3">🧬</div>
+                    <h4 class="text-lg font-bold text-white mb-2">Enzyme Interaction Diagrams</h4>
+                    <p class="text-sm text-gray-400">Visual representation of CYP450 inhibition and drug metabolism pathways</p>
+                </div>
+                
+                <div class="bg-slate-900/50 border border-slate-700 rounded-xl p-5 hover:border-purple-500 transition-all">
+                    <div class="text-3xl mb-3">👤</div>
+                    <h4 class="text-lg font-bold text-white mb-2">Patient-Specific Risk</h4>
+                    <p class="text-sm text-gray-400">Adjust for age, liver function, and kidney function automatically</p>
+                </div>
+                
+                <div class="bg-slate-900/50 border border-slate-700 rounded-xl p-5 hover:border-green-500 transition-all">
+                    <div class="text-3xl mb-3">⏰</div>
+                    <h4 class="text-lg font-bold text-white mb-2">Dosing Schedule</h4>
+                    <p class="text-sm text-gray-400">Optimal timing recommendations to minimize interaction risk</p>
+                </div>
+                
+                <div class="bg-slate-900/50 border border-slate-700 rounded-xl p-5 hover:border-yellow-500 transition-all">
+                    <div class="text-3xl mb-3">💡</div>
+                    <h4 class="text-lg font-bold text-white mb-2">Alternative Suggestions</h4>
+                    <p class="text-sm text-gray-400">Safer herb options for high-risk combinations</p>
+                </div>
+                
+                <div class="bg-slate-900/50 border border-slate-700 rounded-xl p-5 hover:border-pink-500 transition-all">
+                    <div class="text-3xl mb-3">📈</div>
+                    <h4 class="text-lg font-bold text-white mb-2">Risk Breakdown</h4>
+                    <p class="text-sm text-gray-400">Detailed analysis showing base risk plus patient adjustments</p>
+                </div>
+                
+                <div class="bg-slate-900/50 border border-slate-700 rounded-xl p-5 hover:border-cyan-500 transition-all">
+                    <div class="text-3xl mb-3">📄</div>
+                    <h4 class="text-lg font-bold text-white mb-2">Export Reports</h4>
+                    <p class="text-sm text-gray-400">PDF export for sharing with healthcare providers</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Beyond Pharmacovigilance -->
+        <div class="bg-gradient-to-r from-green-900/30 to-teal-900/30 border-2 border-green-500/50 rounded-3xl p-10 mb-20">
+            <h2 class="text-4xl font-black text-green-300 mb-6 text-center">💡 Beyond Traditional Pharmacovigilance</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-yellow-300 mb-3">Traditional Approach (Reactive):</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-start gap-2">
+                            <span class="text-red-400">✗</span>
+                            <span>Reports adverse events <strong>after</strong> they occur</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-red-400">✗</span>
+                            <span>No prediction or prevention</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-red-400">✗</span>
+                            <span>Limited herb-drug interaction data</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-red-400">✗</span>
+                            <span>Slow to identify new interactions</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-green-300 mb-3">AyuAllo-AI (Predictive):</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400">✓</span>
+                            <span>Predicts interactions <strong>before</strong> harm occurs</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400">✓</span>
+                            <span>Deep molecular mechanism study</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400">✓</span>
+                            <span>Continuous ML model learning</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400">✓</span>
+                            <span>Real-time database integration</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-center shadow-2xl">
+            <h2 class="text-4xl md:text-5xl font-black text-white mb-4">
+                Ready to Analyze Your Combination?
+            </h2>
+            <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Free, instant analysis. No signup required. Help make integrative medicine safer.
+            </p>
+            <a href="tool.html" class="inline-block px-12 py-5 bg-white hover:bg-gray-100 text-blue-600 font-black text-2xl rounded-2xl shadow-2xl transition-all hover:scale-105">
+                🚀 Launch AyuAllo-AI Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900/80 backdrop-blur-xl border-t border-slate-700/50 py-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-8">
+                <h3 class="text-3xl font-bold text-white mb-3">Connect With Om Mutyalwar</h3>
+                <p class="text-gray-400 text-lg mb-6">Creator & Developer of AyuAllo-AI</p>
+                
+                <div class="flex flex-col items-center gap-4">
+                    <a href="/cdn-cgi/l/email-protection#234c4e4e56575a424f5442511b63444e424a4f0d404c4e" class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-bold text-lg rounded-xl transition-all hover:scale-105 shadow-lg">
+                        <span class="text-2xl">📧</span>
+                        <span><span class="__cf_email__" data-cfemail="284745455d5c5149445f495a10684f45494144064b4745">[email&#160;protected]</span></span>
+                    </a>
+                    <p class="text-gray-400 text-sm">Open for collaboration, feedback, and research opportunities</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-700 pt-6 text-center">
+                <p class="text-gray-400 text-base mb-2">
+                    <strong>AyuAllo-AI Research Platform</strong> - Version 1.0
+                </p>
+                <p class="text-gray-500 text-sm mb-4">
+                    Bridging traditional Ayurvedic medicine with modern pharmacology through artificial intelligence
+                </p>
+                <p class="text-gray-400 text-base font-bold mb-6">
+                    © 2025 Om Mutyalwar | All Rights Reserved
+                </p>
+                
+                <div class="bg-red-900/20 border-2 border-red-500/40 rounded-xl py-4 px-6 max-w-3xl mx-auto">
+                    <p class="text-red-300 text-sm font-semibold">
+                        ⚠️ <strong>RESEARCH PROTOTYPE:</strong> For educational purposes only. Always consult qualified healthcare professionals before m
